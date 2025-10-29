@@ -1,0 +1,32 @@
+{
+  "name": "@repo/utilities",
+  "version": "0.0.0",
+  "private": true,
+  "exports": {
+    ".": {
+      "import": "./src/index.ts",
+      "require": "./src/index.ts"
+    }
+  },
+  "scripts": {
+    "lint": "eslint . --max-warnings 0",
+    "generate:component": "turbo gen react-component",
+    "check-types": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@types/node": "^22.15.3",
+    "@types/react": "19.1.0",
+    "@types/react-dom": "19.1.1",
+    "eslint": "^9.34.0",
+    "next": "15.5.3",
+    "typescript": "5.9.2"
+  },
+  "dependencies": {
+    "@repo/types": "workspace:",
+    "dotenv": "^16.5.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  }
+}

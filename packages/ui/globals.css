@@ -1,0 +1,135 @@
+@import "tailwindcss";
+
+:root {
+  --blackest: #171717;
+  --black: #222;
+  --darker-gray: #2a2a2a;
+  --dark-gray: #444;
+  --gray-medium: #777;
+  --gray-bright: #eee;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 4rem;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 2.5rem;
+}
+
+h4 {
+  font-size: 1.75rem;
+  line-height: 2rem;
+}
+
+h5 {
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+}
+
+h6 {
+  font-weight: 700;
+}
+
+input {
+  height: 40px;
+}
+
+input,
+textarea {
+  border: solid 2px var(--color-gray-100);
+  border-radius: 8px;
+  background: unset;
+  font-family: unset;
+  font-size: unset;
+  padding: 10px 15px;
+  resize: none;
+}
+
+/* Animation utilities */
+.ui-animate {
+  opacity: 0;
+  transform: var(
+    --ui-animate-transform,
+    translate3d(0, var(--ui-animate-distance, 24px), 0)
+  );
+  transition-property: opacity, transform, filter;
+  transition-duration: var(--ui-animate-duration, 600ms);
+  transition-timing-function: var(
+    --ui-animate-easing,
+    cubic-bezier(0.33, 1, 0.68, 1)
+  );
+  transition-delay: var(--ui-animate-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+.ui-animate-visible {
+  opacity: 1;
+  transform: var(--ui-animate-visible-transform, translate3d(0, 0, 0));
+}
+
+.ui-animate-fade {
+  --ui-animate-transform: translate3d(0, 0, 0);
+}
+
+.ui-animate-fade-up,
+.ui-animate-slide-up {
+  --ui-animate-transform: translate3d(0, var(--ui-animate-distance, 24px), 0);
+}
+
+.ui-animate-fade-down,
+.ui-animate-slide-down {
+  --ui-animate-transform: translate3d(
+    0,
+    calc(var(--ui-animate-distance, 24px) * -1),
+    0
+  );
+}
+
+.ui-animate-fade-left,
+.ui-animate-slide-left {
+  --ui-animate-transform: translate3d(var(--ui-animate-distance, 24px), 0, 0);
+}
+
+.ui-animate-fade-right,
+.ui-animate-slide-right {
+  --ui-animate-transform: translate3d(
+    calc(var(--ui-animate-distance, 24px) * -1),
+    0,
+    0
+  );
+}
+
+.ui-animate-zoom-in {
+  --ui-animate-transform: scale(var(--ui-animate-scale-hidden, 0.92));
+  --ui-animate-visible-transform: scale(var(--ui-animate-scale-visible, 1));
+}
+
+.ui-animate-zoom-out {
+  --ui-animate-transform: scale(var(--ui-animate-scale-hidden, 1.08));
+  --ui-animate-visible-transform: scale(var(--ui-animate-scale-visible, 1));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ui-animate {
+    opacity: 1;
+    transform: none;
+    transition-duration: 0.01ms;
+    transition-delay: 0ms;
+  }
+}

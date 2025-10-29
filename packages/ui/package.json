@@ -1,0 +1,35 @@
+{
+  "name": "@repo/ui",
+  "version": "0.0.0",
+  "private": true,
+  "exports": {
+    ".": {
+      "import": "./src/index.ts",
+      "require": "./src/index.ts"
+    },
+    "./globals.css": "./globals.css"
+  },
+  "scripts": {
+    "lint": "eslint . --max-warnings 0",
+    "generate:component": "turbo gen react-component",
+    "check-types": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@types/node": "^22.15.3",
+    "@types/react": "19.1.0",
+    "@types/react-dom": "19.1.1",
+    "eslint": "^9.38.0",
+    "next": "15.5.3",
+    "typescript": "5.9.2"
+  },
+  "dependencies": {
+    "@repo/context": "workspace:",
+    "@repo/hooks": "workspace:",
+    "@repo/types": "workspace:",
+    "react": "^19.2.0",
+    "react-dom": "^19.1.0",
+    "react-icons": "^5.5.0"
+  }
+}
