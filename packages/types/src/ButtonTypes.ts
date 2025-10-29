@@ -1,7 +1,7 @@
 export type ButtonType = {
   action?: () => void;
   className?: string;
-  color?: "primary" | "gray" | "white";
+  color?: "primary" | "black" | "white";
   darkText?: boolean;
   disabled?: boolean;
   download?: boolean;

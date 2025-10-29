@@ -86,7 +86,7 @@ const FullScreenModal = ({
           role="dialog" // ✅ dialog semantics
           aria-modal="true" // ✅ marks it as a modal
           aria-labelledby="modal-title" // ✅ label for screen readers
-          className="bg-[rgba(255,255,255,.8)] fixed inset-0 z-[99] flex justify-center items-start pt-30 text-3xl"
+          className="bg-[rgba(255,255,255,.8)] fixed inset-0 z-99 flex justify-center items-start pt-30 text-3xl"
           style={{ backdropFilter: "blur(15px)" }}
         >
           <div className="w-full max-w-md px-4 font-bold">
@@ -100,7 +100,7 @@ const FullScreenModal = ({
               <Button
                 button={{
                   action: toggle,
-                  color: "gray",
+                  color: "black",
                   style: "secondary",
                   text: "Close Menu",
                   type: "button",

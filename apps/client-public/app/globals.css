@@ -5,4 +5,6 @@
   --red: #d34d71;
 
   --section-border: var(--color-gray-100);
+  --navLink-border-color: var(--color-gray-200);
+  --navLink-border-color-hover: var(--primary);
 }

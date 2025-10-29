@@ -11,7 +11,7 @@ const AllSocialLinks = ({ size = "medium", socials }: Props) => {
 
   if (socials)
     return (
-      <div className={`flex items-center gap-3 ${textSize}`}>
+      <div className={`flex items-center gap-3 text-gray-800 ${textSize}`}>
         {socials.map((social: socialLinkType) => {
           if (social.link)
             return <SocialLink key={social.name} social={social} />;

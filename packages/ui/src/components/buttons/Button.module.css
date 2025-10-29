@@ -1,12 +1,12 @@
 :root {
   --button-primary-color: var(--primary);
-  --button-secondary-color: var(--dark-gray);
+  --button-secondary-color: var(--color-gray-800);
   --border-radius: 8px;
   --text-color: white;
 }
 
 .button {
-  border: solid 2px transparent;
+  border: solid 3px transparent;
   border-radius: var(--border-radius);
   cursor: pointer;
   display: flex;
@@ -65,33 +65,33 @@
 }
 
 /* GRAY */
-.gray.primary {
+.black.primary {
   background: var(--button-secondary-color);
   border-color: var(--button-secondary-color);
   color: var(--text-color);
 }
 
-.gray.primary:hover {
+.black.primary:hover {
   background-color: unset;
   color: var(--button-secondary-color);
 }
 
-.gray.secondary {
+.black.secondary {
   border-color: var(--button-secondary-color);
   color: var(--button-secondary-color);
 }
 
-.gray.secondary:hover {
+.black.secondary:hover {
   background-color: var(--button-secondary-color);
   color: var(--text-color);
 }
 
-.gray.tertiary {
+.black.tertiary {
   border-bottom-color: var(--button-secondary-color);
   border-radius: 0px;
 }
 
-.gray.tertiary:hover {
+.black.tertiary:hover {
   background-color: var(--button-secondary-color);
   border-radius: var(--border-radius);
   color: var(--text-color);

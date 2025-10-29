@@ -36,9 +36,9 @@ const DesktopNav = ({ links, onHover }: Props) => {
                   onHover(false, undefined);
                 }
               }}
-              className={`py-1 px-5 border-t-4 border-b-4 h-full flex items-center transition-colors hover:border-b-(--navLink-border-color-hover) ${
+              className={`py-1 px-5 border-y-4 border-transparent h-full flex items-center transition-colors hover:border-b-(--navLink-border-color-hover) ${
                 isActive
-                  ? "border-transparent text-(--primary) font-semibold"
+                  ? "border-b-(--navLink-border-color) text-(--primary) font-semibold"
                   : "border-transparent"
               }`}
             >

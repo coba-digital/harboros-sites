@@ -43,8 +43,8 @@ const Button = ({
   } ${
     color == "primary"
       ? styles.primaryColor
-      : color == "gray"
-        ? styles.gray
+      : color == "black"
+        ? styles.black
         : styles.white
   } ${darkText ? styles.darkText : ""}`;
 

@@ -1,12 +1,20 @@
 import { Button, HeroSection, SingleParagraphSection } from "@repo/ui";
 
 import HeaderImage from "@assets/header-banner.webp";
+import { socialLinks } from "@/links";
 
 const Home = () => {
   return (
     <main className="flex flex-col w-full">
       <HeroSection
         className="bg-gray-50"
+        ctaButton={{
+          color: "black",
+          link: "/contact",
+          style: "tertiary",
+          text: "I Want To Contribute",
+        }}
+        socials={socialLinks}
         header1={
           <h1 className="text-(--primary)">
             <span className="text-gray-800">Anchor</span> your email.
