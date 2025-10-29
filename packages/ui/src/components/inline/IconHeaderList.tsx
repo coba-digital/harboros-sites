@@ -11,7 +11,11 @@ interface Props {
 const IconHeaderList = ({ children, icon, title }: Props) => {
   return (
     <div className="flex items-start flex-col">
-      <IconHeader className="mb-5" icon={icon} text={title} />
+      <IconHeader
+        className="mb-5 text-gray-600 font-semibold"
+        icon={icon}
+        text={title}
+      />
       {children}
     </div>
   );

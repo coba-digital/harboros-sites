@@ -23,7 +23,7 @@ const Footer = () => {
       backgroundColor="bg-gray-100"
       classes="border-t-3 border-t-gray-200"
     >
-      <footer className="py-30 px-5 w-full grid grid-cols-1 lg:grid-cols-2 gap-20 lg:gap-10">
+      <footer className="py-30 px-5 w-full grid grid-cols-1 lg:grid-cols-2 gap-20 lg:gap-10 text-gray-500">
         <InlineColumn animate={false} alwaysLeftAligned>
           <div className="flex flex-col gap-5">
             <Link
@@ -32,7 +32,7 @@ const Footer = () => {
             >
               Mail Harbor
             </Link>
-            <p className="max-w-150 text-gray-500">
+            <p className="max-w-150">
               Host your own email server on your own network with secure
               storage. Stop big tech from analyzing your data. Keep privacy and
               control in your own hands with a seemless experience.
@@ -62,7 +62,7 @@ const Footer = () => {
           <InlineColumn animate={false}>
             <IconHeaderList icon={FiTool} title="Our Toolkit">
               <div className="mb-5">
-                <h6>Front-End</h6>
+                <h6 className="text-gray-600">Front-End</h6>
                 <ExternalAnchor link="https://nextjs.org/" text="Next JS" />
                 <ExternalAnchor link="https://react.dev" text="React JS" />
                 <ExternalAnchor
@@ -75,7 +75,7 @@ const Footer = () => {
                 />
               </div>
               <div className="mb-5">
-                <h6>Back-End</h6>
+                <h6 className="text-gray-600">Back-End</h6>
                 <ExternalAnchor
                   link="https://www.mongodb.com/"
                   text="MongoDB"
@@ -90,7 +90,7 @@ const Footer = () => {
           <InlineColumn animate={false}>
             <IconHeaderList icon={RiShakeHandsLine} title="Get Involved">
               <div className="mb-5">
-                <h6>Connect with Us</h6>
+                <h6 className="text-gray-600">Connect with Us</h6>
                 {githubLink?.link && (
                   <Link
                     className="hover:text-(--primary)"
@@ -114,7 +114,7 @@ const Footer = () => {
 
             <IconHeaderList icon={FaRegCheckCircle} title="Other Projects">
               <div className="mb-5">
-                <h6>Harbor OS</h6>
+                <h6 className="text-gray-600">Harbor OS</h6>
                 <p>Contacts</p>
                 <p>Calendar</p>
                 <p>Media</p>

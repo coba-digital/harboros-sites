@@ -10,7 +10,9 @@ const Home = () => {
         header1={
           <h1 className="text-(--primary)">
             <span className="text-gray-800">Anchor</span> your email.
-            <br />
+            <span className="hidden md:inline">
+              <br />
+            </span>
             Take back <span className="text-gray-800">control</span>.
           </h1>
         }

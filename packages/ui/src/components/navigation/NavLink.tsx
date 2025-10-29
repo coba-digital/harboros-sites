@@ -19,9 +19,9 @@ const NavLink = ({ text, link, onClick }: Props) => {
   return (
     <Link
       href={link}
-      className={`font-medium py-1 px-2 border-b-2 hover:border-[var(--navLink-border-color-hover)] transition-colors ${
+      className={`py-1 px-2 border-b-2 hover:border-(--navLink-border-color-hover) transition-colors ${
         pathname === link || rootPath == rootLink
-          ? "border-[var(--navLink-border-color)]"
+          ? "border-(--navLink-border-color)"
           : "border-transparent"
       }`}
       onClick={onClick}

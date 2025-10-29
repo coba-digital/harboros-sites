@@ -17,11 +17,11 @@ const page = () => {
               Let&apos;s <span className="hidden md:inline">Have A Chat!</span>
               <span className="inline md:hidden">Connect!</span>
             </h1>
-            <h4 className="text-gray-400 font-medium">
-              We build <strong className="text-(--accent)">empowering</strong>{" "}
-              software, that unlocks{" "}
-              <strong className="text-(--accent)">personal sovereignty</strong>.
-            </h4>
+            <h6 className="text-gray-500 font-semibold">
+              Empowering{" "}
+              <span className="text-gray-700">personal sovereignty</span>{" "}
+              through better software.
+            </h6>
           </div>
           <p>
             If you&apos;re passionate about owning your data, or building
