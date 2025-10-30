@@ -1,7 +1,7 @@
 :root {
   /* TODO Update temporary colors */
   --primary: #060e85;
-  --accent: #acff11;
+  --accent: #b3ff00;
   --red: #d34d71;
 
   --section-border: var(--color-gray-100);

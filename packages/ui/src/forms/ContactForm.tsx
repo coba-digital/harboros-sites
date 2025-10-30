@@ -160,7 +160,7 @@ const ContactForm = ({ noBackground = false }: Props) => {
         ) : (
           <Button
             button={{
-              color: "gray",
+              color: "primary",
               disabled: true,
               style: "primary",
               text: "Sending...",
