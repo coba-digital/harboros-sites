@@ -1,0 +1,2 @@
+- Add robot.txt and sitemap files
+- Clean up the entire shared libraries... ew..
