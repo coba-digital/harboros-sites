@@ -1,7 +1,8 @@
 :root {
   --button-primary-color: var(--primary);
+  --button-accent-color: var(--accent);
   --button-secondary-color: var(--color-gray-800);
-  --border-radius: 8px;
+  --border-radius: 4px;
   --text-color: white;
 }
 
@@ -64,35 +65,71 @@
   color: var(--text-color);
 }
 
+/* ACCENT */
+.accent.primary {
+  background: var(--button-accent-color);
+  border-color: var(--button-accent-color);
+}
+
+.accent.primary:not(.darkText) {
+  color: var(--text-color);
+}
+
+.accent.primary:hover {
+  background-color: unset;
+  color: var(--button-accent-color);
+}
+
+.accent.secondary {
+  border-color: var(--button-accent-color);
+  color: var(--button-accent-color);
+}
+
+.accent.secondary:hover {
+  background-color: var(--button-accent-color);
+  color: var(--text-color);
+}
+
+.accent.tertiary {
+  border-bottom-color: var(--button-accent-color);
+  border-radius: 0px;
+}
+
+.accent.tertiary:hover {
+  background-color: var(--button-accent-color);
+  border-radius: var(--border-radius);
+  color: var(--text-color);
+}
+
 /* GRAY */
 .black.primary {
-  background: var(--button-secondary-color);
-  border-color: var(--button-secondary-color);
+  background: black;
+  border-color: black;
   color: var(--text-color);
 }
 
 .black.primary:hover {
   background-color: unset;
-  color: var(--button-secondary-color);
+  color: black;
 }
 
 .black.secondary {
-  border-color: var(--button-secondary-color);
-  color: var(--button-secondary-color);
+  border-color: black;
+  color: black;
 }
 
 .black.secondary:hover {
-  background-color: var(--button-secondary-color);
+  background-color: black;
   color: var(--text-color);
 }
 
 .black.tertiary {
-  border-bottom-color: var(--button-secondary-color);
+  border-bottom-color: black;
   border-radius: 0px;
 }
 
 .black.tertiary:hover {
-  background-color: var(--button-secondary-color);
+  background-color: black;
   border-radius: var(--border-radius);
   color: var(--text-color);
 }

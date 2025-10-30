@@ -1,15 +1,21 @@
 import { socialLinkType } from "@repo/types";
-import styles from "./SocialLink.module.css";
 
 interface Props {
+  clasName?: string;
   social: socialLinkType;
 }
 
-const SocialLink = ({ social }: Props) => {
+const SocialLink = ({ clasName, social }: Props) => {
   const { icon, link, name } = social;
   return (
-    <a href={link} target="_blank" rel="noreferrer" aria-label={name}>
-      <div className={styles.socialLink}>{icon}</div>
+    <a
+      className={clasName}
+      href={link}
+      target="_blank"
+      rel="noreferrer"
+      aria-label={name}
+    >
+      {icon}
     </a>
   );
 };

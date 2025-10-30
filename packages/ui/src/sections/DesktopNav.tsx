@@ -38,7 +38,7 @@ const DesktopNav = ({ links, onHover }: Props) => {
               }}
               className={`py-1 px-5 border-y-4 border-transparent h-full flex items-center transition-colors hover:border-b-(--navLink-border-color-hover) ${
                 isActive
-                  ? "border-b-(--navLink-border-color) text-(--primary) font-semibold"
+                  ? "border-b-(--navLink-border-color)"
                   : "border-transparent"
               }`}
             >
@@ -50,6 +50,7 @@ const DesktopNav = ({ links, onHover }: Props) => {
       {links.cta && (
         <Button
           button={{
+            color: links.cta.color,
             darkText: links.cta.darkText,
             link: links.cta.link,
             text: links.cta.text,

@@ -1,3 +1,4 @@
+import { NavigationBarLinksType } from "@repo/types";
 import {
   BsGithub,
   BsTwitterX,
@@ -34,7 +35,7 @@ export const socialLinks = [
   },
 ];
 
-export const navigationBarLinks = {
+export const navigationBarLinks: NavigationBarLinksType = {
   links: [
     {
       link: "/",
@@ -42,6 +43,7 @@ export const navigationBarLinks = {
     },
   ],
   cta: {
+    color: "primary",
     link: "/contact",
     text: "Contact Us",
   },

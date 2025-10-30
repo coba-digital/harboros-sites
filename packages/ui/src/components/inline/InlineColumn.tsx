@@ -15,16 +15,17 @@ const InlineColumn = ({
   className,
 }: Props) => {
   const classes = `h-full w-full flex ${alwaysLeftAligned ? "" : "sm:justify-center"} ${className}`;
+  const innerClasses = `flex flex-col gap-10`;
 
   if (!animate)
     return (
       <div className={classes}>
-        <div className="flex flex-col gap-10 ">{children}</div>
+        <div className={innerClasses}>{children}</div>
       </div>
     );
   return (
     <AnimateOnScroll className={classes}>
-      <div className="flex flex-col gap-10 ">{children}</div>
+      <div className={innerClasses}>{children}</div>
     </AnimateOnScroll>
   );
 };

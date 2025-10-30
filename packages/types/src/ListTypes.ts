@@ -11,6 +11,12 @@ export type socialLinkType = {
 
 export type SocialLinkListType = socialLinkType[];
 
+export type AllSocialsType = {
+  color?: "black" | "white";
+  size?: "small" | "medium" | "large";
+  socials: SocialLinkListType;
+};
+
 // Cards
 export type SimpleCardType = {
   buttonText?: string;
