@@ -7,25 +7,34 @@ export const metadata: Metadata = {
   title: "Contact us - Mail Harbor",
 };
 
+const TextUnderline = ({ children }: { children: string }) => {
+  return (
+    <span className="text-(--primary) font-semibold border-b-3 border-b-(--accent) transition-colors pb-0.5">
+      {children}
+    </span>
+  );
+};
+
 const page = () => {
   return (
     <SectionWrapper classes="py-30 md:py-20 md:py-30">
       <div className="flex flex-col xl:flex-row items-center justify-center gap-10 md:gap-25">
         <AnimateOnScroll className="max-w-200 flex flex-col gap-5 px-5">
           <div>
-            <h1 className="text-(--primary)">
-              Let&apos;s <span className="hidden md:inline">Have A Chat!</span>
-              <span className="inline md:hidden">Connect!</span>
-            </h1>
-            <h6 className="text-gray-500 font-semibold">
-              Empowering{" "}
-              <span className="text-gray-700">personal sovereignty</span>{" "}
+            <h1>We&apos;re All About</h1>
+            <h6>
+              <span className="px-3 py-2 bg-black text-white rounded-md">
+                personal sovereignty
+              </span>{" "}
               through better software.
             </h6>
           </div>
           <p>
-            If you&apos;re passionate about owning your data, or building
-            systems that enhance privacy and give control back to the people,
+            If you&apos;re passionate about{" "}
+            <TextUnderline>owning your data</TextUnderline>, or{" "}
+            <TextUnderline>building systems</TextUnderline> that{" "}
+            <TextUnderline>enhance privacy</TextUnderline> and{" "}
+            <TextUnderline>give control back to the people</TextUnderline>,
             we&apos;d love to chat with you on how we can partner together.
           </p>
         </AnimateOnScroll>
