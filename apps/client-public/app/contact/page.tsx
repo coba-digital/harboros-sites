@@ -1,18 +1,15 @@
 import { Metadata } from "next";
 import React from "react";
 
-import { AnimateOnScroll, ContactForm, SectionWrapper } from "@repo/ui";
+import {
+  AnimateOnScroll,
+  ContactForm,
+  SectionWrapper,
+  TextUnderline,
+} from "@repo/ui";
 
 export const metadata: Metadata = {
   title: "Contact us - Mail Harbor",
-};
-
-const TextUnderline = ({ children }: { children: string }) => {
-  return (
-    <span className="text-(--primary) font-semibold border-b-3 border-b-(--accent) transition-colors pb-0.5">
-      {children}
-    </span>
-  );
 };
 
 const page = () => {

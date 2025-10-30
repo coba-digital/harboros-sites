@@ -1,4 +1,5 @@
 import React from "react";
+import { Metadata } from "next";
 
 // Components
 import { HeroSection } from "@repo/ui";
@@ -6,6 +7,10 @@ import { HeroSection } from "@repo/ui";
 import { socialLinks } from "@/links";
 import { FaCheckCircle } from "react-icons/fa";
 import BackgroundImage from "@assets/contact-banner.webp";
+
+export const metadata: Metadata = {
+  title: "Message Sent - Mail Harbor",
+};
 
 const page = () => {
   return (
