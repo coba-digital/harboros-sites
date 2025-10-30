@@ -1,8 +1,10 @@
 :root {
   /* TODO Update temporary colors */
-  --primary: #3d507e;
-  --accent: #5882ac;
+  --primary: #060e85;
+  --accent: #acff11;
   --red: #d34d71;
 
   --section-border: var(--color-gray-100);
+  --navLink-border-color: var(--color-gray-200);
+  --navLink-border-color-hover: var(--primary);
 }

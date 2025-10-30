@@ -1,9 +1,0 @@
-.socialLink {
-  align-items: center;
-  display: flex;
-  transition: color 250ms ease-in-out;
-}
-
-.socialLink:hover {
-  color: var(--primary);
-}

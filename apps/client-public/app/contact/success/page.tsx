@@ -19,7 +19,7 @@ const page = () => {
       <div className="flex justify-center">
         <div className="p-10 flex flex-col gap-5 glass rounded-xl">
           <AnimateOnScroll>
-            <h1 className="flex items-center flex-col md:flex-row md:gap-3 text-center md:text-left text-(--primary)">
+            <h1 className="flex items-center flex-col md:flex-row md:gap-3 text-center md:text-left text-gray-800">
               <IoCheckmarkCircleOutline /> Message Sent
             </h1>
             <p className="max-w-150 my-5">
@@ -32,6 +32,7 @@ const page = () => {
           <AnimateOnScroll className="flex items-center gap-5" delay={300}>
             <Button
               button={{
+                color: "black",
                 link: "/",
                 size: "large",
                 style: "secondary",

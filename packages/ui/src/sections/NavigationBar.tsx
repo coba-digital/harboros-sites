@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { ReactNode, useState } from "react";
 import { StaticImageData } from "next/image";
 import { IoReorderThreeOutline } from "react-icons/io5";
 import {
@@ -23,7 +23,7 @@ interface Props {
   logoAlt?: string;
   logoHeight?: number;
   logoImage?: StaticImageData;
-  logoText?: string;
+  logoText?: string | ReactNode;
   socials?: SocialLinkListType;
 }
 
@@ -69,7 +69,7 @@ const NavigationBar = ({
               height={logoHeight}
             />
           ) : (
-            <Link className="font-bold text-3xl text-gray-800" href="/">
+            <Link className="font-bold text-3xl" href="/">
               {logoText}
             </Link>
           )}
@@ -84,7 +84,7 @@ const NavigationBar = ({
             socials={socials}
           />
         </div>
-        {/* TODO Implement a mobile nav menu */}
+        {/* TODO Implement a mobile nav menu like desktop */}
         <div className="lg:hidden inline">
           <FullScreenModal
             icon={IoReorderThreeOutline}

@@ -7,13 +7,18 @@ import "./globals.css";
 // Development & Analytics
 // import { GoogleAnalytics } from "@repo/utilities";
 import { Environment } from "@repo/utilities";
-import { EnvironmentBanner, NavigationBar, StickyTop } from "@repo/ui";
+import {
+  EnvironmentBanner,
+  MailHarbor,
+  NavigationBar,
+  StickyTop,
+} from "@repo/ui";
 
 // Metadata
 export const metadata: Metadata = {
-  title: "Mail Harbor - Private and self-hosted email",
+  title: "MailHarbor - Private and self-hosted email",
   description:
-    "Mail Harbor enables everyday people and privacy enthusiasts alike to host their own email server on their home network with secure storage. We provide a secure method of email communication that puts the privacy and control in the users hands with a seemless experience between desktop & apps. We empower people with easy setup, peace-of-mind, and most importantly- a prive place for you to send, receive, and store your email communication.",
+    "MailHarbor enables everyday people and privacy enthusiasts alike to host their own email server on their home network with secure storage. We provide a secure method of email communication that puts the privacy and control in the users hands with a seemless experience between desktop & apps. We empower people with easy setup, peace-of-mind, and most importantly- a prive place for you to send, receive, and store your email communication.",
 };
 
 // Navigation Links
@@ -45,7 +50,11 @@ export default function RootLayout({
             <MobileProvider>
               <NavigationBar
                 links={navigationBarLinks}
-                logoText="Mail Harbor"
+                logoText={
+                  <p>
+                    <MailHarbor />
+                  </p>
+                }
                 socials={socialLinks}
               />
             </MobileProvider>

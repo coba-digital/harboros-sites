@@ -43,9 +43,11 @@ const Button = ({
   } ${
     color == "primary"
       ? styles.primaryColor
-      : color == "gray"
-        ? styles.gray
-        : styles.white
+      : color == "accent"
+        ? styles.accent
+        : color == "black"
+          ? styles.black
+          : styles.white
   } ${darkText ? styles.darkText : ""}`;
 
   if (download || external)

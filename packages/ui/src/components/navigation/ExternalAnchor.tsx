@@ -23,7 +23,7 @@ const ExternalAnchor = ({
   const iconSizeClass = `${textSize == "small" ? "text-xs" : textSize == "large" ? "text-lg" : ""}`;
 
   const textColorClass = `${textColor == "lightGray" ? "text-gray-400" : textColor == "primary" ? "text-(--primary)" : "text-base"}`;
-  const textHoverClasses = `${textHoverColor == "white" ? "hover:text-white" : "hover:text-(--accent)"}`;
+  const textHoverClasses = `${textHoverColor == "white" ? "hover:text-white" : "hover:text-(--primary)"}`;
 
   return (
     <a

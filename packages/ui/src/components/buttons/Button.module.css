@@ -1,17 +1,18 @@
 :root {
   --button-primary-color: var(--primary);
-  --button-secondary-color: var(--dark-gray);
-  --border-radius: 8px;
+  --button-accent-color: var(--accent);
+  --button-secondary-color: var(--color-gray-800);
+  --border-radius: 4px;
   --text-color: white;
 }
 
 .button {
-  border: solid 2px transparent;
+  border: solid 3px transparent;
   border-radius: var(--border-radius);
   cursor: pointer;
   display: flex;
   justify-self: start;
-  font-weight: 500;
+  font-weight: 700;
   transition:
     color 250ms ease-in-out,
     background 250ms ease-in-out,
@@ -64,35 +65,71 @@
   color: var(--text-color);
 }
 
-/* GRAY */
-.gray.primary {
-  background: var(--button-secondary-color);
-  border-color: var(--button-secondary-color);
+/* ACCENT */
+.accent.primary {
+  background: var(--button-accent-color);
+  border-color: var(--button-accent-color);
+}
+
+.accent.primary:not(.darkText) {
   color: var(--text-color);
 }
 
-.gray.primary:hover {
+.accent.primary:hover {
   background-color: unset;
-  color: var(--button-secondary-color);
+  color: var(--button-accent-color);
 }
 
-.gray.secondary {
-  border-color: var(--button-secondary-color);
-  color: var(--button-secondary-color);
+.accent.secondary {
+  border-color: var(--button-accent-color);
+  color: var(--button-accent-color);
 }
 
-.gray.secondary:hover {
-  background-color: var(--button-secondary-color);
+.accent.secondary:hover {
+  background-color: var(--button-accent-color);
   color: var(--text-color);
 }
 
-.gray.tertiary {
-  border-bottom-color: var(--button-secondary-color);
+.accent.tertiary {
+  border-bottom-color: var(--button-accent-color);
   border-radius: 0px;
 }
 
-.gray.tertiary:hover {
-  background-color: var(--button-secondary-color);
+.accent.tertiary:hover {
+  background-color: var(--button-accent-color);
+  border-radius: var(--border-radius);
+  color: var(--text-color);
+}
+
+/* GRAY */
+.black.primary {
+  background: black;
+  border-color: black;
+  color: var(--text-color);
+}
+
+.black.primary:hover {
+  background-color: unset;
+  color: black;
+}
+
+.black.secondary {
+  border-color: black;
+  color: black;
+}
+
+.black.secondary:hover {
+  background-color: black;
+  color: var(--text-color);
+}
+
+.black.tertiary {
+  border-bottom-color: black;
+  border-radius: 0px;
+}
+
+.black.tertiary:hover {
+  background-color: black;
   border-radius: var(--border-radius);
   color: var(--text-color);
 }

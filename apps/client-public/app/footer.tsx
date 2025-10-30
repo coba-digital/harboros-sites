@@ -1,21 +1,52 @@
+import { ReactNode } from "react";
+
 // Components
 import { socialLinks } from "@/links";
 import {
   ExternalAnchor,
-  IconHeaderList,
   InlineColumn,
+  MailHarbor,
   SectionWrapper,
 } from "@repo/ui";
 import Link from "next/link";
 import { BsChatFill } from "react-icons/bs";
 
-// Icons
-import { FaRegCheckCircle } from "react-icons/fa";
-import { FiTool } from "react-icons/fi";
-import { RiShakeHandsLine } from "react-icons/ri";
-
 // import CCM from "@/assets/logos/CCM.webp";
 const githubLink = socialLinks.find((s) => s.name === "github");
+
+const Card = ({
+  header,
+  children,
+}: {
+  header: string;
+  children: ReactNode;
+}) => {
+  return (
+    <div className="flex flex-col min-w-100 sm:min-w-60">
+      <h6 className="bg-black py-2 px-3 text-white rounded-md font-bold">
+        {header}
+      </h6>
+      <div className="flex flex-col gap-10 h-full md:w-full p-5">
+        {children}
+      </div>
+    </div>
+  );
+};
+
+const CardSection = ({
+  children,
+  header,
+}: {
+  children: ReactNode;
+  header: string;
+}) => {
+  return (
+    <div className="flex flex-col items-start">
+      <h6 className="mb-2">{header}</h6>
+      {children}
+    </div>
+  );
+};
 
 const Footer = () => {
   return (
@@ -26,13 +57,10 @@ const Footer = () => {
       <footer className="py-30 px-5 w-full grid grid-cols-1 lg:grid-cols-2 gap-20 lg:gap-10">
         <InlineColumn animate={false} alwaysLeftAligned>
           <div className="flex flex-col gap-5">
-            <Link
-              className="font-bold text-3xl text-gray-700 self-start"
-              href="/"
-            >
-              Mail Harbor
+            <Link className="font-bold text-3xl text-black self-start" href="/">
+              <MailHarbor />
             </Link>
-            <p className="max-w-150 text-gray-500">
+            <p className="max-w-150">
               Host your own email server on your own network with secure
               storage. Stop big tech from analyzing your data. Keep privacy and
               control in your own hands with a seemless experience.
@@ -58,39 +86,28 @@ const Footer = () => {
         </InlineColumn>
 
         {/* Links Section */}
-        <div className="border-3 border-transparent lg:border-l-gray-200 border-t-gray-200 pt-20 lg:pt-0 lg:border-t-transparent text-nowrap flex flex-col sm:flex-row gap-20 sm:gap-5">
-          <InlineColumn animate={false}>
-            <IconHeaderList icon={FiTool} title="Our Toolkit">
-              <div className="mb-5">
-                <h6>Front-End</h6>
-                <ExternalAnchor link="https://nextjs.org/" text="Next JS" />
-                <ExternalAnchor link="https://react.dev" text="React JS" />
-                <ExternalAnchor
-                  link="https://turborepo.com/"
-                  text="Turborepo"
-                />
-                <ExternalAnchor
-                  link="https://www.typescriptlang.org"
-                  text="Typescript"
-                />
-              </div>
-              <div className="mb-5">
-                <h6>Back-End</h6>
-                <ExternalAnchor
-                  link="https://www.mongodb.com/"
-                  text="MongoDB"
-                />
-                <ExternalAnchor link="https://ngrok.com" text="ngrok" />
-                <ExternalAnchor link="https://nodejs.org/en" text="Node JS" />
-                <ExternalAnchor link="https://postman.com" text="Postman" />
-              </div>
-            </IconHeaderList>
-          </InlineColumn>
+        <div className="flex flex-col sm:flex-row justify-evenly gap-10 sm:gap-5 text-nowrap">
+          <Card header="Our Toolkit">
+            <CardSection header="Front-End">
+              <ExternalAnchor link="https://nextjs.org/" text="Next JS" />
+              <ExternalAnchor link="https://react.dev" text="React JS" />
+              <ExternalAnchor link="https://turborepo.com/" text="Turborepo" />
+              <ExternalAnchor
+                link="https://www.typescriptlang.org"
+                text="Typescript"
+              />
+            </CardSection>
+            <CardSection header="Back-End">
+              <ExternalAnchor link="https://www.mongodb.com/" text="MongoDB" />
+              <ExternalAnchor link="https://ngrok.com" text="ngrok" />
+              <ExternalAnchor link="https://nodejs.org/en" text="Node JS" />
+              <ExternalAnchor link="https://postman.com" text="Postman" />
+            </CardSection>
+          </Card>
 
-          <InlineColumn animate={false}>
-            <IconHeaderList icon={RiShakeHandsLine} title="Get Involved">
-              <div className="mb-5">
-                <h6>Connect with Us</h6>
+          <div className="flex flex-col gap-10">
+            <Card header="Get Involved">
+              <CardSection header="Connect with Us">
                 {githubLink?.link && (
                   <Link
                     className="hover:text-(--primary)"
@@ -105,22 +122,21 @@ const Footer = () => {
                 )}
                 <Link className="hover:text-(--primary)" href="/contact">
                   <div className="flex items-center gap-2">
-                    <BsChatFill className="hover:text-(--primary)" />
+                    <BsChatFill />
                     Contact Us
                   </div>
                 </Link>
-              </div>
-            </IconHeaderList>
+              </CardSection>
+            </Card>
 
-            <IconHeaderList icon={FaRegCheckCircle} title="Other Projects">
-              <div className="mb-5">
-                <h6>Harbor OS</h6>
+            <Card header="Other Projects">
+              <CardSection header="Harbor OS">
                 <p>Contacts</p>
                 <p>Calendar</p>
                 <p>Media</p>
-              </div>
-            </IconHeaderList>
-          </InlineColumn>
+              </CardSection>
+            </Card>
+          </div>
         </div>
       </footer>
     </SectionWrapper>

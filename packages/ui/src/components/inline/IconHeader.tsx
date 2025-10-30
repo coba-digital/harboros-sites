@@ -8,8 +8,8 @@ interface Props {
 
 const IconHeader = ({ className, icon: Icon, text }: Props) => {
   return (
-    <div className={`flex items-center gap-2  text-xl ${className}`}>
-      <div className="flex items-center" aria-hidden="true">
+    <div className={`flex items-center gap-2  text-2xl ${className}`}>
+      <div className="flex items-center text-xl" aria-hidden="true">
         <Icon />
       </div>
       <p>{text}</p>
