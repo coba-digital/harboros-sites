@@ -6,7 +6,7 @@ import "./globals.css";
 
 // Development & Analytics
 // import { GoogleAnalytics } from "@repo/utilities";
-import { Environment } from "@repo/utilities";
+import { EnvironmentControl } from "@repo/utilities";
 import {
   EnvironmentBanner,
   HarborMail,
@@ -44,9 +44,9 @@ export default function RootLayout({
       <body>
         <div className="flex items-center flex-col">
           <StickyTop>
-            <Environment environment="development">
+            <EnvironmentControl environment="development">
               <EnvironmentBanner />
-            </Environment>
+            </EnvironmentControl>
             <MobileProvider>
               <NavigationBar
                 links={navigationBarLinks}
