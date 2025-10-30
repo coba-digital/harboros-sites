@@ -1,5 +1,5 @@
 {
-  "name": "harbor-os",
+  "name": "harbor-sites",
   "private": true,
   "scripts": {
     "build": "turbo run build",

@@ -24,7 +24,7 @@ importers:
         specifier: 5.9.2
         version: 5.9.2
 
-  apps/client-public:
+  apps/harbor-mail:
     dependencies:
       '@repo/context':
         specifier: workspace:*

@@ -38,7 +38,7 @@ const HomePage = () => {
           built for peace of mind—not ad networks. We don&apos;t just put
           control back in your hands, we build easy-to-use systems that keep
           your data physically separate from big tech.{" "}
-          <strong>We handle the complexity, you handle your inbox.</strong>
+          <strong>We handle the complexity, you control your inbox.</strong>
         </p>
       </HeroSection>
       <SingleParagraphSection extraPaddingY>

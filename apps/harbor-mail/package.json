@@ -1,5 +1,5 @@
 {
-  "name": "@repo/client-public",
+  "name": "@repo/harbor-mail",
   "version": "0.1.0",
   "private": true,
   "scripts": {

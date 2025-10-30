@@ -11,7 +11,7 @@ export const socialLinks = [
   {
     name: "github",
     icon: <BsGithub />,
-    link: "https://github.com/coreycollinsm/harbor-mail",
+    link: "https://github.com/coba-digital/harboros-sites",
   },
   {
     name: "x",
