@@ -9,7 +9,7 @@ import { FaCheckCircle } from "react-icons/fa";
 import BackgroundImage from "@assets/contact-banner.webp";
 
 export const metadata: Metadata = {
-  title: "Message Sent - Mail Harbor",
+  title: "Message Sent - Harbor Mail",
 };
 
 const page = () => {

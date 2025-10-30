@@ -17,7 +17,7 @@ export { default as ImageCard } from "./components/cards/ImageCard";
 export { default as IconHeader } from "./components/inline/IconHeader";
 export { default as IconHeaderList } from "./components/inline/IconHeaderList";
 export { default as InlineColumn } from "./components/inline/InlineColumn";
-export { default as MailHarbor } from "./components/inline/MailHarbor";
+export { default as HarborMail } from "./components/inline/HarborMail";
 export { default as Metric } from "./components/inline/Metric";
 export { default as TextUnderline } from "./components/inline/TextUnderline";
 

@@ -9,7 +9,7 @@ import {
 } from "@repo/ui";
 
 export const metadata: Metadata = {
-  title: "Contact us - Mail Harbor",
+  title: "Contact us - Harbor Mail",
 };
 
 const page = () => {

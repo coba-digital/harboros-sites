@@ -1,12 +1,12 @@
-const MailHarbor = () => {
+const HarborMail = () => {
   return (
     <>
-      Mail
+      Harbor
       <span className="border-black border-4 py-1 px-2 rounded-sm ml-2">
-        Harbor
+        Mail
       </span>
     </>
   );
 };
 
-export default MailHarbor;
+export default HarborMail;

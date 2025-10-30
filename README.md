@@ -1,6 +1,6 @@
-# Mail Harbor
+# Harbor Mail
 
-**Store your emails securely and on your own terms**: Mail Harbor enables everyday people and privacy enthusiasts alike to host their own email server on their home network. The core mission is to accomplish the following:
+**Store your emails securely and on your own terms**: Harbor Mail enables everyday people and privacy enthusiasts alike to host their own email server on their home network. The core mission is to accomplish the following:
 
 ## Our Mission
 
