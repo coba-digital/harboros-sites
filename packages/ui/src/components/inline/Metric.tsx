@@ -21,9 +21,7 @@ const Metric = ({
         <h5>{bottomText}</h5>
       </div>
       {disclaimer && (
-        <p className="text-[var(--gray-medium)] text-sm italic">
-          *{disclaimer}
-        </p>
+        <p className="text-(--gray-medium) text-sm italic">*{disclaimer}</p>
       )}
     </AnimateOnScroll>
   );

@@ -1,32 +1,56 @@
 import React from "react";
-import { AnimateOnScroll, Button } from "@repo/ui";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Page Not Found - Mail Harbor",
+};
+
+import { HeroSection, TextUnderline } from "@repo/ui";
+import Link from "next/link";
 
 const notfound = () => {
   // TODO convert this to a UI component
   return (
-    <AnimateOnScroll className="py-50 px-5 flex flex-col items-start gap-5">
-      <AnimateOnScroll className="flex sm:flex-row flex-col sm:items-center sm:gap-5 text-gray-400">
-        <h2>404</h2>
-        <h1>Page Not Found</h1>
-      </AnimateOnScroll>
-      <AnimateOnScroll delay={300}>
+    <HeroSection
+      className="py-50 px-5 flex flex-col items-start gap-5"
+      header1={
+        <h1>
+          Negative Ghost Rider <span className="text-(--accent)">&#187;</span>
+        </h1>
+      }
+    >
+      <div className="flex flex-col items-start">
         <p className="max-w-150">
-          We work hard to clean up and redirect outdated links. Sometimes a few
-          can slip through the cracks. You can check back later if you&apos;d
-          like.
+          The pattern is full. Or... In this case.. maybe it never existed?.
+          We&apos;re not sure... but{" "}
+          <TextUnderline>
+            we do work hard to clean up and redirect old links
+          </TextUnderline>
+          . Sometimes a few just slip through the cracks. Or... you just made a
+          mistake?.. That&apos;s more likely, actually.
         </p>
-      </AnimateOnScroll>
-      <AnimateOnScroll delay={600}>
-        <Button
-          button={{
-            link: "/",
-            size: "large",
-            style: "primary",
-            text: "Return Home",
+        <Link
+          className="mt-5 relative"
+          href="/"
+          style={{
+            transition:
+              "color 250ms ease-in-out, background 250ms ease-in-out, border-radius 100ms ease-in-out",
           }}
-        />
-      </AnimateOnScroll>
-    </AnimateOnScroll>
+        >
+          <div className="border-3 border-(--primary) text-(--primary) rounded-md cursor-pointer font-semibold  text-nowrap py-2 px-3 hover:bg-(--primary) hover:text-white">
+            Can we interest you in a Home page?
+          </div>
+          <div
+            className="absolute top-0 left-0 right-0 bottom-0 bg-(--primary) text-white flex items-center justify-center opacity-0 hover:opacity-100 rounded-md font-semibold"
+            style={{
+              transition: "opacity 250ms ease-in-out",
+            }}
+          >
+            I admit that I made the mistake.
+          </div>
+        </Link>
+      </div>
+    </HeroSection>
   );
 };
 

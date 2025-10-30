@@ -19,6 +19,7 @@ export { default as IconHeaderList } from "./components/inline/IconHeaderList";
 export { default as InlineColumn } from "./components/inline/InlineColumn";
 export { default as MailHarbor } from "./components/inline/MailHarbor";
 export { default as Metric } from "./components/inline/Metric";
+export { default as TextUnderline } from "./components/inline/TextUnderline";
 
 // Media
 export { default as Video } from "./components/media/Video";
