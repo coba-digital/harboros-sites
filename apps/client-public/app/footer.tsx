@@ -5,7 +5,7 @@ import { socialLinks } from "@/links";
 import {
   ExternalAnchor,
   InlineColumn,
-  MailHarbor,
+  HarborMail,
   SectionWrapper,
 } from "@repo/ui";
 import Link from "next/link";
@@ -58,7 +58,7 @@ const Footer = () => {
         <InlineColumn animate={false} alwaysLeftAligned>
           <div className="flex flex-col gap-5">
             <Link className="font-bold text-3xl text-black self-start" href="/">
-              <MailHarbor />
+              <HarborMail />
             </Link>
             <p className="max-w-150">
               Host your own email server on your own network with secure

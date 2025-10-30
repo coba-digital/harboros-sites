@@ -9,16 +9,16 @@ import "./globals.css";
 import { Environment } from "@repo/utilities";
 import {
   EnvironmentBanner,
-  MailHarbor,
+  HarborMail,
   NavigationBar,
   StickyTop,
 } from "@repo/ui";
 
 // Metadata
 export const metadata: Metadata = {
-  title: "MailHarbor - Private and self-hosted email",
+  title: "Harbor Mail - Private and self-hosted email",
   description:
-    "MailHarbor enables everyday people and privacy enthusiasts alike to host their own email server on their home network with secure storage. We provide a secure method of email communication that puts the privacy and control in the users hands with a seemless experience between desktop & apps. We empower people with easy setup, peace-of-mind, and most importantly- a prive place for you to send, receive, and store your email communication.",
+    "Harbor Mail enables everyday people and privacy enthusiasts alike to host their own email server on their home network with secure storage. We provide a secure method of email communication that puts the privacy and control in the users hands with a seemless experience between desktop & apps. We empower people with easy setup, peace-of-mind, and most importantly- a prive place for you to send, receive, and store your email communication.",
 };
 
 // Navigation Links
@@ -52,7 +52,7 @@ export default function RootLayout({
                 links={navigationBarLinks}
                 logoText={
                   <p>
-                    <MailHarbor />
+                    <HarborMail />
                   </p>
                 }
                 socials={socialLinks}
