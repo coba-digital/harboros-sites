@@ -16,22 +16,22 @@ export const socialLinks = [
   {
     name: "x",
     icon: <BsTwitterX />,
-    link: "",
+    link: "https://x.com/harbor_os_",
   },
   {
     name: "facebook",
     icon: <BsFacebook />,
-    link: "",
+    link: "https://www.facebook.com/harborsoftware/about_details",
   },
   {
     name: "instagram",
     icon: <BsInstagram />,
-    link: "",
+    link: "https://www.instagram.com/harbor.os",
   },
   {
     name: "linkedin",
     icon: <BsLinkedin />,
-    link: "",
+    link: "https://www.linkedin.com/company/harbor-os",
   },
 ];
 
