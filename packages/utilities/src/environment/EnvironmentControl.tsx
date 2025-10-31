@@ -6,7 +6,7 @@ interface Props {
 }
 
 const Environment = ({ children, environment }: Props) => {
-  const currentEnvironment = process.env.NEXT_ENVIRONMENT;
+  const currentEnvironment = process.env.NODE_ENV;
   if (currentEnvironment == environment) return <>{children}</>;
 };
 

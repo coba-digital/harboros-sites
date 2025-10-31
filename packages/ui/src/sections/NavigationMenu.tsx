@@ -2,7 +2,6 @@ import { NavigationMenuType, SocialLinkListType } from "@repo/types";
 import Link from "next/link";
 import ExternalAnchor from "../components/navigation/ExternalAnchor";
 import AllSocialLinks from "../components/inline/AllSocialLinks";
-import AnimateOnScroll from "../components/utilities/AnimateOnScroll";
 
 interface Props {
   menu: {
@@ -25,7 +24,7 @@ const NavigationMenu = ({ menu, onHover, socials }: Props) => {
           transform: "translateY(100%)",
         }}
       >
-        <AnimateOnScroll className="max-w-[1400px] w-full grid grid-cols-4 items-start py-10 px-5">
+        <div className="max-w-[1400px] w-full grid grid-cols-4 items-start py-10 px-5">
           {menuItems.map((section) => {
             return (
               <div className="flex flex-col gap-5" key={section.header}>
@@ -57,16 +56,13 @@ const NavigationMenu = ({ menu, onHover, socials }: Props) => {
               </div>
             );
           })}
-        </AnimateOnScroll>
+        </div>
         {socials && (
           <div className="w-full bg-white flex justify-center">
-            <AnimateOnScroll
-              className="max-w-[1400px] w-full p-5 flex gap-3 items-center"
-              delay={300}
-            >
-              Connect with Me:
+            <div className="max-w-[1400px] w-full p-5 flex gap-3 items-center">
+              Connect with Us:
               <AllSocialLinks size="small" socials={socials} />
-            </AnimateOnScroll>
+            </div>
           </div>
         )}
       </div>

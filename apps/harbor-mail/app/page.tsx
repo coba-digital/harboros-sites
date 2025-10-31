@@ -4,7 +4,7 @@ import {
   HarborMail,
   SingleParagraphSection,
 } from "@repo/ui";
-import { socialLinks } from "@/links";
+import { socialLinks } from "@repo/utilities";
 
 import HeroImage from "@assets/hero-banner.webp";
 import CTAImage from "@assets/cta-banner.webp";

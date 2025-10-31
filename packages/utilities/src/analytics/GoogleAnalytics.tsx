@@ -11,7 +11,7 @@ const GoogleAnalytics = ({ gid }: Props) => {
     return;
   }
 
-  ConsoleLogString("Google Analytics Loaded");
+  ConsoleLogString(`Google Analytics Loaded: GID ${gid}`);
   return (
     <>
       {/* Google Analytics Script */}
@@ -28,7 +28,7 @@ const GoogleAnalytics = ({ gid }: Props) => {
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
 
-              gtag('config', 'G-HB4KV8YHYX');
+              gtag('config', '${gid}');
             `,
         }}
         strategy="afterInteractive"

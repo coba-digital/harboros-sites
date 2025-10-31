@@ -1,12 +1,16 @@
 import type { Metadata } from "next";
 
 // CSS Import
-import "@repo/ui/globals.css";
-import "./globals.css";
+import "@repo/ui/globals.css"; // shared UI styles
+import "./colors.css"; // local colors
 
 // Development & Analytics
 // import { GoogleAnalytics } from "@repo/utilities";
-import { Environment } from "@repo/utilities";
+import {
+  EnvironmentControl,
+  GoogleAnalytics,
+  socialLinks,
+} from "@repo/utilities";
 import {
   EnvironmentBanner,
   HarborMail,
@@ -22,7 +26,7 @@ export const metadata: Metadata = {
 };
 
 // Navigation Links
-import { navigationBarLinks, socialLinks } from "../links";
+import { navigationBarLinks } from "../links";
 import { MobileProvider } from "@repo/context";
 
 // Individual Components
@@ -33,20 +37,21 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const gid = process.env.NEXT_PUBLIC_GA_ID || "";
+
   return (
     <html lang="en">
       <head>
-        {/* TODO add analytics */}
-        {/* <Environment environment="development">
-          <GoogleAnalytics />
-        </Environment> */}
+        <EnvironmentControl environment="development">
+          <GoogleAnalytics gid={gid} />
+        </EnvironmentControl>
       </head>
       <body>
         <div className="flex items-center flex-col">
           <StickyTop>
-            <Environment environment="development">
+            <EnvironmentControl environment="development">
               <EnvironmentBanner />
-            </Environment>
+            </EnvironmentControl>
             <MobileProvider>
               <NavigationBar
                 links={navigationBarLinks}
