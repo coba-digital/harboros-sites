@@ -46,7 +46,7 @@ const notfound = () => {
               transition: "opacity 250ms ease-in-out",
             }}
           >
-            I admit that I made the mistake.
+            Click to admit you made a mistake.
           </div>
         </Link>
       </div>
