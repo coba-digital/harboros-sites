@@ -42,7 +42,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <EnvironmentControl environment="development">
+        <EnvironmentControl environment="production">
           <GoogleAnalytics gid={gid} />
         </EnvironmentControl>
       </head>
