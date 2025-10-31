@@ -17,7 +17,7 @@ const GoogleAnalytics = ({ gid }: Props) => {
       {/* Google Analytics Script */}
       <Script
         async
-        src={`https://www.googletagmanager.com/gtag/js?id=${gid}}`}
+        src={`https://www.googletagmanager.com/gtag/js?id=${gid}`}
         strategy="afterInteractive"
       />
       <Script
