@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 
 // Components
-import { socialLinks } from "@/links";
+import { socialLinks } from "@repo/utilities";
 import {
   ExternalAnchor,
   InlineColumn,

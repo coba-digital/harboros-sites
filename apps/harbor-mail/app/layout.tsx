@@ -6,7 +6,7 @@ import "./globals.css";
 
 // Development & Analytics
 // import { GoogleAnalytics } from "@repo/utilities";
-import { EnvironmentControl } from "@repo/utilities";
+import { EnvironmentControl, socialLinks } from "@repo/utilities";
 import {
   EnvironmentBanner,
   HarborMail,
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 };
 
 // Navigation Links
-import { navigationBarLinks, socialLinks } from "../links";
+import { navigationBarLinks } from "../links";
 import { MobileProvider } from "@repo/context";
 
 // Individual Components

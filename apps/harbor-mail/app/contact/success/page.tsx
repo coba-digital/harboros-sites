@@ -4,7 +4,7 @@ import { Metadata } from "next";
 // Components
 import { HeroSection } from "@repo/ui";
 
-import { socialLinks } from "@/links";
+import { socialLinks } from "@repo/utilities";
 import { FaCheckCircle } from "react-icons/fa";
 import BackgroundImage from "@assets/contact-banner.webp";
 
