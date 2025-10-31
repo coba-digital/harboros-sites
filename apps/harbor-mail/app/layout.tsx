@@ -1,12 +1,16 @@
 import type { Metadata } from "next";
 
 // CSS Import
-import "@repo/ui/globals.css";
-import "./globals.css";
+import "@repo/ui/globals.css"; // shared UI styles
+import "./colors.css"; // local colors
 
 // Development & Analytics
 // import { GoogleAnalytics } from "@repo/utilities";
-import { EnvironmentControl, socialLinks } from "@repo/utilities";
+import {
+  EnvironmentControl,
+  GoogleAnalytics,
+  socialLinks,
+} from "@repo/utilities";
 import {
   EnvironmentBanner,
   HarborMail,
@@ -33,13 +37,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const gid = process.env.NEXT_PUBLIC_GA_ID || "";
+
   return (
     <html lang="en">
       <head>
-        {/* TODO add analytics */}
-        {/* <Environment environment="development">
-          <GoogleAnalytics />
-        </Environment> */}
+        <EnvironmentControl environment="development">
+          <GoogleAnalytics gid={gid} />
+        </EnvironmentControl>
       </head>
       <body>
         <div className="flex items-center flex-col">
